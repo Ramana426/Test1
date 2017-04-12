@@ -1,0 +1,176 @@
+<html>
+<style>
+.vericaltext{    
+    margin-right:0px;
+	margin-left:-20px;
+    width:1px;
+    word-wrap: break-word;
+    font-family: monospace; /* this is just for good looks */
+}
+.menu	{
+	width:200px;
+	height:10px;
+	element {
+    width: 50.5%;
+    margin-left: 34px;
+	
+	
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+$(document).ready(function(){
+ $('#purpose1').click(function() {
+ if ( this.value == '1'){
+ $("#Exact Address Search").show();
+		$("#validation").show();}
+		
+ });
+   $("#Exact Address Search").show();
+		$("#validation").show();
+    $('#purpose1').on('change', function() {
+      
+       if ( this.value == '2')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").show();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	  
+	   if ( this.value == '3')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").show();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	   if ( this.value == '4')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").show();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	  if ( this.value == '5')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").show();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	  if ( this.value == '6')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").show();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	  if ( this.value == '7')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").show();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	  if ( this.value == '8')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").show();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	  
+	  if ( this.value == '9')
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").show();
+		$("#validation").show();
+		$("#validation1").hide();
+		
+      }
+	  
+	  else
+      {
+		$("#ExacAddressSearch").hide();
+        $("#SearchForPossible Address").hide();
+		$("#Exact Customer/Address").hide();
+		$("#FInd Customers For Address").hide();
+		$("#Insert Address Into LRDS").hide();
+		$("#Exact Customer Search").hide();
+		$("#Search For possible Customer").hide();
+		$("#Find Address For Customer").hide();
+		$("#Insert Customer Into LRDS").hide();
+		$("#validation").hide();
+		$("#validation1").hide();
+		
+      }
+	   }
+    });
+});
+</script>
