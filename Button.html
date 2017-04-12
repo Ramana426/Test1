@@ -1,0 +1,314 @@
+<html>
+<style>
+.vericaltext{    
+    margin-right:0px;
+	margin-left:-20px;
+    width:1px;
+    word-wrap: break-word;
+    font-family: monospace; /* this is just for good looks */
+}
+.menu	{
+	width:200px;
+	height:10px;
+	element {
+    width: 50.5%;
+    margin-left: 34px;
+	
+	
+	}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+
+$(document).ready(function(){
+ $('#purpose').click(function() {
+ if ( this.value == '11'){
+ $("#unparsed").show();
+		}
+		
+ });
+   $("#unparsed").show();
+		
+    $('#purpose').on('change', function() {
+      
+       if ( this.value == '22')
+      {
+        $("#parsed").show();
+		$("#addressid").hide();
+		$("#domestic").hide();
+        $("#unparsed").hide();
+		
+		
+      }
+	  else  if ( this.value == '33')
+      {
+        $("#parsed").hide();
+		$("#addressid").show();
+		$("#domestic").hide();
+        $("#unparsed").hide();
+      }
+	  
+	  else  if ( this.value == '44')
+      {
+        $("#parsed").hide();
+		$("#addressid").hide();
+		$("#domestic").show();
+        $("#unparsed").hide();
+		
+      }
+	 
+       else  
+      {
+        $("#parsed").hide();
+		$("#addressid").hide();
+		$("#domestic").hide();
+        $("#unparsed").hide();
+		
+      }
+    });
+});
+
+</script>
+
+<br><br>
+<body>
+
+<fieldset style="width:90.5%;margin-left:100px;">
+<div class = menu>
+<button class="vericaltext" type="button" onclick="alert('Hello world!')">Search</button></br>
+<button class="vericaltext" type="button" onclick="alert('Hello world!')">Results</button>
+</div>
+
+<fieldset style="width:46.5%;margin-left:50px;">
+<legend></legend>
+
+<tr>
+<td style="padding-left:100px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Function:</td>
+<td>
+<select id='purpose1' style="width: 220px;">
+
+<option value="1" id="Test">Exact Address Search</option>
+<option value="2">Search For Possible Address </option>
+<option value="3"> Exact Customer/Address </option>
+<option value="4">FInd Customers For Address</option>
+<option value="5">Insert Address Into LRDS</option>
+<option value="6">Exact Customer Search</option>
+<option value="7">Search For possible Customer</option>
+<option value="8">Find Address For Customer</option>
+<option value="9">Insert Customer Into LRDS</option>
+
+</select>
+</td>
+</tr>
+</div>
+<body>
+</fieldset>
+
+<br>
+
+
+<br><br>
+
+
+
+
+<fieldset style="width:46.5%;margin-left:55px;align:center;">
+<legend>Input Address</legend>
+
+<tr>
+<td style="padding-left:100px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Input Format :</td>
+<td>
+<select id='purpose' style="width: 200px;">
+
+<option value="11" id="Test">Service Address (Unparsed)</option>
+<option value="22">Service Address (Parsed)</option>
+<option value="33">Address Id</option>
+<option value="44">Domestic rural Address</option>
+
+</select>
+</td>
+</tr>
+
+
+<div style='display:none;' id='unparsed'>
+<table>
+ <tr>
+<td style="padding-left:60px;"> Country:</td>
+<td><select name="City" style="width: 200px;padding-left:20px;">
+<option size="30" value="-1" selected></option>
+</select></td>
+</tr>
+
+
+<tr>
+<td> Address Line 1 &nbsp   : </td>
+<td><input type="text" name="paddress" id="paddress" size="20"></td>
+</tr>
+<tr>
+<td>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp City   :</td>
+<td><input type="text" name="paddress" id="paddress" size="30"></td>
+</tr>
+ <tr>
+<td> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp State :</td>
+<td><select name="City" style="width: 200px;">
+<option value="-1" selected></option>
+</select></td>
+<td>Zip:</td>
+<td><input type="text" name="paddress" id="paddress" size="10"></td>
+</tr>
+
+</table>
+</div>
+
+<!-- Write your parsed div fields below -->
+<div style='display:none;' id='parsed'>
+
+<table>
+ <tr>
+<td> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Country  :</td>
+<td><select name="City" style="width: 200px;">
+<option size="30" value="-1" selected></option>
+</select></td>
+</tr>
+<tr>
+<td>Premise Number  :</td>
+<td><input type="text" name="paddress" id="paddress" size="10"></td>
+</tr>
+<td>PreDirection &nbsp &nbsp &nbsp  :</td>
+<td><select name="City" style="width: 100px;">
+<option value="-1" selected></option>
+</select></td>
+<tr>
+<td>&nbsp &nbsp &nbsp Street Name :</td>
+<td><input type="text" name="paddress" id="paddress" size="20"></td>
+<td>Street Type :</td>
+<td><input type="text" name="paddress" id="paddress" size="10"></td>
+</tr>
+ <tr>
+ <td> &nbsp &nbsp  PostDirection :</td>
+<td><select name="City" style="width: 50px;">
+<option value="-1" selected></option>
+</select></td>
+</tr>
+<tr>
+<td>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspUnitType :</td>
+<td><select name="City" style="width: 100px;">
+<option value="-1" selected></option>
+<td>UnitNumber:</td>
+<td><select name="City" style="width: 100px;">
+<option value="-1" selected></option>
+</tr>
+
+</select></td>
+ <tr>
+<td>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp City :</td>
+<td><input type="text" name="paddress" id="paddress" size="20"></td>
+</tr>
+ 
+ 
+
+<tr>
+<td>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp State:</td>
+<td><select name="City" style="width: 200px;">
+<option value="-1" selected></option>
+
+<!-- Spaces -->
+
+<td>  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp   &nbsp Zip:</td>
+<td><select name="City" style="width: 100px;">
+<option value="-1" selected></option>
+</tr>
+</select></td> 
+ 
+ 
+ 
+
+</table>
+</div>
+
+<!-- Write your addressid div fields below -->
+<div style='display:none;' id='addressid'>
+<table>
+ <tr>
+<td> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Addreess Id :</td>
+<td><input type="text" name="paddress" id="paddress" size="20"></td>
+</tr>
+
+</table>
+</div>
+
+<!-- Write your domestic div fields below -->
+<div style='display:none;' id='domestic'>
+<table>
+
+ <tr>
+<td>&nbsp &nbsp&nbsp RR/HC Type :</td>
+<td><select name="City" style="width: 200px;">
+<option size="20" value="-1" selected></option>
+</select></td>
+
+<td>&nbspRoute:</td>
+<td><input type="text" name="paddress" id="paddress" size="10"></td>
+
+<td>Box:</td>
+<td><input type="text" name="paddress" id="paddress" size="10"></td>
+
+</tr>
+
+
+
+<tr>
+<td>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp City  :</td>
+<td><input type="text" name="paddress" id="paddress" size="20"></td>
+</tr>
+
+ <tr>
+<td>&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspState :</td>
+<td><select name="City" style="width: 200px;">
+<option value="-1" selected></option>
+</select></td>
+
+
+<td>&nbsp &nbsp Zip:</td>
+<td><input type="text" name="paddress" id="paddress" size="10"></td>
+</tr>
+</table>
+</table>
+</div>
+
+
+
+</fieldset>
+<br>
+<button type="button" onclick="alert('Hello world!')" style="margin-left:50px;">Submit</button>
+<button type="button" onclick="alert('Hello world!')" >Clear</button>
+
+
+
+
+
+
+<!-- Validation  -->
+<div style='display:none;' id='validation1'>
+<fieldset style="width:46.5%; px;margin-left:50px;">
+<legend>Customer Information</legend>
+<table>
+<tr>
+<td> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Customer Id:&nbsp   : </td>
+<td><input type="text" name="paddress" id="paddress" size="20"></td>
+<td> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  -OR-</td>
+ 
+<td> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Customer Name:&nbsp   : </td>
+<td><input type="text" name="paddress" id="paddress" size="20"></td>
+</tr>
+</table>
+</fieldset>
+</div>
+
+
+<br>
+
+</fieldset>
+</body>
+</html>
