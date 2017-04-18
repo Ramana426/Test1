@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+  <script>
+    angular.module("myapp", [])
+      .controller("MyController", function($scope) {
+        $scope.register = {};
+        $scope.register.country = "";
+       
+        $scope.register.countries = [{
+          id: "1",
+          name: "Service Address (Unparsed)"
+        }, {
+          id: "2",
+          name: "Service Address (parsed)"
+        }, {
+          id: "3",
+          name: "Address Id"
+        }, {
+          id: "4",
+          name: "Office Id"
+         }, {
+          id: "5",
+          name: "Domestic rural Address "
+         }, {
+          id: "6",
+          name: "Latitude / longitude"
+         }, {
+          id: "7",
+          name: "Single line Entry"
+         }, {
+          id: "",
+          name: "Batch File"
+        }];
+        
+        $scope.register.country = "Service Address (Unparsed)";
+
+      });
+  </script>
+</head>
+
+<body ng-app="myapp">
+  <div ng-controller="MyController">
+    
+    
+    <div>
+      Input Format :<select ng-model="register.country" ng-selected="$first" ng-options="field.name as field.name for field in register.countries " ></select>
+       <!-- country.id as country.name for country in register.countries -->
+    </div>
+
+
+
+      <div ng-hide="register.country == 'Address Id' || register.country == 'Address Id' "  >
+         Country :<tr>
+                  
+                  <td><select name="City" style="width: 150px;padding-left:20px;">
+                  <option size="30" value="-1" selected></option>
+                  </select></td>
+                  </tr>
+      </div>
+      
+      
+      <div ng-hide="register.country == 'Service Address (Unparsed)' ||  register.country ==  'Address Id' || register.country ==  'Office Id'
+      
+      || register.country ==  'Domestic rural Address '   || register.country ==  'Latitude / longitude'  || register.country ==  'Single line Entry'   || register.country ==  'Batch File'">
+          Premise Number : 
+         <tr>
+               <td style="padding-left:256px;"></td>
+               <td><input type = "text" ng-model = "subjectName"size="25"></td>
+         </tr>
+      </div>
+    
+    
+     <div ng-hide="register.country == 'Service Address (Unparsed)' ||  register.country ==  'Address Id'  " >
+          Post Direction : 
+         <tr>
+                  
+                  <td><select name="City" style="width: 150px;padding-left:20px;">
+                  <option size="30" value="-1" selected></option>
+                  </select></td>
+                  </tr>
+      </div>
+    
+    
+    
+    
+    <div ng-hide="register.country == 'Service Address (Unparsed)' || register.country == 'Address Id'" >
+          Street name : 
+         <tr>
+               <td style="padding-left:256px;"></td>
+               <td><input type = "text" ng-model = "subjectName"size="25"></td>
+         </tr>
+         
+         Street Type : 
+         <tr>
+               <td style="padding-left:256px;"></td>
+               <td><input type = "text" ng-model = "subjectName"size="5"></td>
+         </tr>
+         
+      </div >
+      
+      
+    
+      <div ng-hide="register.country == 'Service Address (Unparsed)' ||  register.country ==  'Address Id'" >
+          Unit Type : 
+         <tr>
+                  
+                  <td><select name="City" style="width: 150px;padding-left:20px;">
+                  <option size="30" value="-1" selected></option>
+                  </select></td>
+                  </tr>
+         
+         Unit Number : 
+         <tr>
+               <td style="padding-left:256px;"></td>
+               <td><input type = "text" ng-model = "subjectName"size="5"></td>
+         </tr>
+         
+      </div >
+      <div  ng-hide="register.country == 'Service Address (parsed)' ||  register.country ==  'Address Id'">
+          Address Line 1 : 
+         <tr>
+               <td style="padding-left:256px;"></td>
+               <td><input type = "text" ng-model = "subjectName"size="25"></td>
+         </tr>
+      </div>
+    
+    
+    
+    
+      <div ng-hide="register.country ==  'Address Id'" >
+            City: 
+          <tr>
+               <td style="padding-left:256px;"></td>
+               <td><input type = "text" ng-model = "subjectName"size="20"></td>
+         </tr>
+      </div>
+    
+     
+      <div ng-hide="register.country ==  'Address Id'">
+          State : 
+         <tr>
+                  
+                  <td><select name="City" style="width: 150px;padding-left:20px;">
+                  <option size="30" value="-1" selected></option>
+                  </select>
+                
+    
+               
+               <td ng-hide="register.country ==  'Address Id'"> Zip : 
+               <td><input type = "text" ng-model = "subjectName"size="10"></td>
+               </td>
+        </tr>
+    </div>
+    
+
+    
+     <div ng-hide="register.country == 'Service Address (Unparsed)' ||  register.country == 'Service Address (parsed)'" >
+            Address Id: 
+          <tr>
+               <td style="padding-left:256px;"></td>
+               <td><input type = "text" ng-model = "subjectName"size="20"></td>
+         </tr>
+      </div>
+      
+  
+     
+  </div>
+  <div>
+    <br/><a href="http://www.code-sample.com/2014/11/set-default-value-in-dropdown-list-in.html" target="_blank">Go more example set default value in drop-down...</a></div>
+</body>
+
+</html>
